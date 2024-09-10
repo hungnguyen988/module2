@@ -1,7 +1,7 @@
 package ss1.bai_tap;
 
 import java.util.Scanner;
-public class Bai1 {
+public class Bai1_LoiChao {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("mời nhập tên");

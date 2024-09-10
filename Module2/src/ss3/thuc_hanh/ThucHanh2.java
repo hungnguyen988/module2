@@ -2,7 +2,7 @@ package ss3.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Th2 {
+public class ThucHanh2 {
     public static void main(String[] args) {
         String students[] = {"a", "b", "c"};
         Scanner sc = new Scanner(System.in);

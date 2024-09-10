@@ -1,6 +1,6 @@
 package ss1.thuc_hanh;
 
-public class Th2 {
+public class ThucHanh2 {
     public static void main(String[] args) {
         byte i = 10;
         float f = 20.5f;

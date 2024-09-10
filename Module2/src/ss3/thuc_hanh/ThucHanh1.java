@@ -2,7 +2,7 @@ package ss3.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Th1 {
+public class ThucHanh1 {
     public static void main(String[] args) {
         int size;
         int[] array;

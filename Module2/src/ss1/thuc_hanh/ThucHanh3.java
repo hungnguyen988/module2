@@ -2,7 +2,7 @@ package ss1.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Th3 {
+public class ThucHanh3 {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
         System.out.println("nhập chiều dài");

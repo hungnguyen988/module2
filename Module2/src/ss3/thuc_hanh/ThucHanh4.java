@@ -2,7 +2,7 @@ package ss3.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Th4 {
+public class ThucHanh4 {
     public static void main(String[] args) {
 
         System.out.println("menu");
