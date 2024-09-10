@@ -1,3 +1,5 @@
+package ss2.bai_tap;
+
 import java.util.Scanner;
 
 public class Bai1 {

@@ -1,3 +1,5 @@
+package ss1.bai_tap;
+
 import java.util.Scanner;
 public class Bai1 {
     public static void main(String[] args) {
@@ -7,4 +9,3 @@ public class Bai1 {
         System.out.println("hello " + name);
     }
 }
-

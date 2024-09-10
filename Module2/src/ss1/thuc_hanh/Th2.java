@@ -1,3 +1,5 @@
+package ss1.thuc_hanh;
+
 public class Th2 {
     public static void main(String[] args) {
         byte i = 10;

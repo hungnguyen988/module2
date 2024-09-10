@@ -1,3 +1,5 @@
+package ss1.thuc_hanh;
+
 import java.util.Scanner;
 
 public class Th3 {

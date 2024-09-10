@@ -1,3 +1,5 @@
+package ss2.bai_tap;
+
 public class Bai3 {
     public static void main(String[] args) {
         for (int i = 2; i < 100; i++) {
