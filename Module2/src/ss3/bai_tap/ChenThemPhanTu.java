@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai2_ChenThemPhanTu {
+public class ChenThemPhanTu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double[] array = new double[10];

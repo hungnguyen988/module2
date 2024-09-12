@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai8_DemSoLanXuatHien {
+public class DemSoLanXuatHien {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập chuỗi");

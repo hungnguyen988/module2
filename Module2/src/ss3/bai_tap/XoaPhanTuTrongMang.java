@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai1_XoaPhanTuTrongMang {
+public class XoaPhanTuTrongMang {
     public static void main(String[] args) {
         int array[] = {1, 4, 7, 8};
         Scanner sc = new Scanner(System.in);

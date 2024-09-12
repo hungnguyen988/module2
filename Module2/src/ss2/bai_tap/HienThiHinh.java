@@ -2,7 +2,7 @@ package ss2.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai2_HienThiHinh {
+public class HienThiHinh {
     public static void main(String[] args) {
         int choice = -1;
         Scanner input = new Scanner(System.in);

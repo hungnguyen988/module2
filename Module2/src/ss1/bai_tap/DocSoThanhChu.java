@@ -2,7 +2,7 @@ package ss1.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai3_DocSoThanhChu {
+public class DocSoThanhChu {
     public static void main(String[] args) {
         System.out.println("mời nhập số: ");
         Scanner input = new Scanner(System.in);

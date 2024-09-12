@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai5_TimMin {
+public class TimMin {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n;

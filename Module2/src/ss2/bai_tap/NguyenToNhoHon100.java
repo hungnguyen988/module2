@@ -1,6 +1,6 @@
 package ss2.bai_tap;
 
-public class Bai3_NguyenToNhoHon100 {
+public class NguyenToNhoHon100 {
     public static void main(String[] args) {
         for (int i = 2; i < 100; i++) {
             boolean flag = true;

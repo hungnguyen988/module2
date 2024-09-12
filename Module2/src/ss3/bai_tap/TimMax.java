@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai4_TimMax {
+public class TimMax {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         byte n, m;

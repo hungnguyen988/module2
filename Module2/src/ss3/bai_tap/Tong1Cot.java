@@ -2,7 +2,7 @@ package ss3.bai_tap;
 
 import java.util.Scanner;
 
-public class Bai6_Tong1Cot {
+public class Tong1Cot {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n, m, x, min;

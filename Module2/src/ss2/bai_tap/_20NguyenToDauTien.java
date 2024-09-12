@@ -1,6 +1,6 @@
 package ss2.bai_tap;
 
-public class Bai1_20NguyenToDauTien {
+public class _20NguyenToDauTien {
     public static void main(String[] args) {
         int count = 0;
 
