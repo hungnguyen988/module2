@@ -1,4 +1,4 @@
-package model;
+package quan_ly_san_pham.src.model;
 
 public class Customer {
     public int id;

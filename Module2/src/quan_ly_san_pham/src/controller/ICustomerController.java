@@ -1,6 +1,6 @@
-package controller;
+package quan_ly_san_pham.src.controller;
 
-import model.Customer;
+import quan_ly_san_pham.src.model.Customer;
 
 public interface ICustomerController {
     public void createCustomer(Customer customer);

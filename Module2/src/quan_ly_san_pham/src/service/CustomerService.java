@@ -1,8 +1,8 @@
-package service;
+package quan_ly_san_pham.src.service;
 
-import model.Customer;
-import repository.CustomerRepository;
-import repository.ICustomerRepository;
+import quan_ly_san_pham.src.model.Customer;
+import quan_ly_san_pham.src.repository.CustomerRepository;
+import quan_ly_san_pham.src.repository.ICustomerRepository;
 
 import java.util.List;
 

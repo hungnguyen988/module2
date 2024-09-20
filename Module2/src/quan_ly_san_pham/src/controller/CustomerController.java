@@ -1,11 +1,11 @@
-package controller;
+package quan_ly_san_pham.src.controller;
 
 
-import model.Customer;
-import service.CustomerService;
-import service.ICustomerService;
-import view.CustomerView;
-import view.ICustomerView;
+import quan_ly_san_pham.src.model.Customer;
+import quan_ly_san_pham.src.service.CustomerService;
+import quan_ly_san_pham.src.service.ICustomerService;
+import quan_ly_san_pham.src.view.CustomerView;
+import quan_ly_san_pham.src.view.ICustomerView;
 
 import java.util.List;
 

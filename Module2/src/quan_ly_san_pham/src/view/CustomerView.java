@@ -1,6 +1,6 @@
-package view;
+package quan_ly_san_pham.src.view;
 
-import model.Customer;
+import quan_ly_san_pham.src.model.Customer;
 
 import java.util.List;
 

@@ -1,6 +1,8 @@
-import controller.CustomerController;
-import controller.ICustomerController;
-import model.Customer;
+package quan_ly_san_pham.src;
+
+import quan_ly_san_pham.src.controller.CustomerController;
+import quan_ly_san_pham.src.controller.ICustomerController;
+import quan_ly_san_pham.src.model.Customer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

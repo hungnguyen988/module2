@@ -1,6 +1,6 @@
-package repository;
+package quan_ly_san_pham.src.repository;
 
-import model.Customer;
+import quan_ly_san_pham.src.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
