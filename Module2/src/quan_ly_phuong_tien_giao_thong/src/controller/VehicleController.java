@@ -4,14 +4,15 @@ import quan_ly_phuong_tien_giao_thong.src.model.Car;
 import quan_ly_phuong_tien_giao_thong.src.model.Motorbike;
 import quan_ly_phuong_tien_giao_thong.src.model.Truck;
 import quan_ly_phuong_tien_giao_thong.src.model.Vehicle;
+import quan_ly_phuong_tien_giao_thong.src.service.IVehicleService;
 import quan_ly_phuong_tien_giao_thong.src.service.VehicleService;
 
 import java.util.List;
 
-public class VehicleController {
-    private VehicleService vehicleService;
+public class VehicleController implements IVehicleController {
+    private IVehicleService vehicleService;
 
-    public VehicleController(VehicleService vehicleService) {
+    public VehicleController(IVehicleService vehicleService) {
         this.vehicleService = vehicleService;
     }
 

@@ -1,17 +1,21 @@
 package quan_ly_phuong_tien_giao_thong.src.view;
 
+import quan_ly_phuong_tien_giao_thong.src.controller.IVehicleController;
 import quan_ly_phuong_tien_giao_thong.src.controller.VehicleController;
+import quan_ly_phuong_tien_giao_thong.src.model.Manufacturer;
 import quan_ly_phuong_tien_giao_thong.src.model.Vehicle;
+import quan_ly_phuong_tien_giao_thong.src.repository.IVehicleRepository;
 import quan_ly_phuong_tien_giao_thong.src.repository.VehicleRepository;
 
+import java.awt.*;
 import java.util.Scanner;
 
-public class VehicleView {
-    private VehicleController vehicleController;
-    private VehicleRepository vehicleRepository;
+public class VehicleView implements IVehicleView {
+    private IVehicleController vehicleController;
+    private IVehicleRepository vehicleRepository;
     private Scanner scanner;
 
-    public VehicleView(VehicleController vehicleController) {
+    public VehicleView(IVehicleController vehicleController) {
         this.vehicleController = vehicleController;
         this.vehicleRepository = new VehicleRepository();
         this.scanner = new Scanner(System.in);
@@ -137,8 +141,7 @@ public class VehicleView {
             System.out.println("Enter manufacturer: ");
             vehicleRepository.displayManufacturer();
             System.out.println("Enter model: ");
-            model = scanner.nextInt();
-            scanner.nextLine();
+            model = Integer.parseInt(scanner.nextLine());
             switch (model) {
                 case 1:
                     manufacturer = "TOYOTA";
@@ -149,11 +152,19 @@ public class VehicleView {
                 case 3:
                     manufacturer = "MERCEDES";
                     break;
+                case 4:
+                    System.out.println("Hãng khác");
+                    System.out.print("Nhập tên ");
+                    String newManufacturer = scanner.nextLine();
+                    manufacturer = newManufacturer;
+                    vehicleRepository.addManufacturer(new Manufacturer("15",manufacturer,"vn"));
+                    break;
+
 
 //                default:
 //                    System.out.println("Invalid manufacturer. Please try again.");
             }
-        } while (model < 1 || model > 3);
+        } while (model < 1 || model > 4);
         return manufacturer;
     }
 

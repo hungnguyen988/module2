@@ -5,27 +5,26 @@ import quan_ly_phuong_tien_giao_thong.src.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleRepository {
+public class VehicleRepository implements IVehicleRepository {
+    public List<Manufacturer> manufacturers = new ArrayList<>();
     private List<Car> cars = new ArrayList<>();
     private List<Truck> trucks = new ArrayList<>();
     private List<Motorbike> motorbikes = new ArrayList<>();
-    public List<Manufacturer> manufacturers = new ArrayList<>();
 
-    // Constructor để khởi tạo các hãng sản xuất
-    public VehicleRepository() {
-        createManufacturer(); // Tạo các hãng sản xuất khi khởi tạo
-    }
 
-    // Phương thức chỉ tạo hãng sản xuất một lần
-    private void createManufacturer() {
+    {
         manufacturers.add(new Manufacturer("1", "TOYOTA", "dfd1"));
         manufacturers.add(new Manufacturer("2", "HUYNDAI", "dfd2"));
         manufacturers.add(new Manufacturer("3", "MERCEDES", "dfd3"));
     }
 
+    public void addManufacturer(Manufacturer manufacturer) {
+        manufacturers.add(manufacturer);
+    }
+
+
 
     public void displayManufacturer() {
-
         for (int i = 0; i < manufacturers.size(); i++) {
             System.out.println((i+1) + ": " + manufacturers.get(i));
         }
