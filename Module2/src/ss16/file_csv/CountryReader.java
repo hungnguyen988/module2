@@ -13,7 +13,7 @@ public class CountryReader {
         System.out.print("Nhập đường dẫn đến file CSV (đường dẫn tuyệt đối): ");
         String csvFile = scanner.nextLine();  // Tên file CSV
         String line ;
-        String csvSplitBy = ",";  // Dấu phân cách trong CSV
+        String csvSplitBy = ",";
 
         // Danh sách để lưu trữ các quốc gia
         List<Country> countries = new ArrayList<>();
