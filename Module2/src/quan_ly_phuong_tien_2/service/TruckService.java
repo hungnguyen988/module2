@@ -2,25 +2,26 @@ package quan_ly_phuong_tien_2.service;
 
 import quan_ly_phuong_tien_2.model.Truck;
 import quan_ly_phuong_tien_2.model.Vehicle;
-import quan_ly_phuong_tien_2.repository.IVehicleRepository;
+import quan_ly_phuong_tien_2.repository.IMotorRepository;
+import quan_ly_phuong_tien_2.repository.ITruckRepository;
 
-public class TruckService implements IVehicleService  {
-    private IVehicleRepository truckRepository;
+public class TruckService implements ITruckService  {
+    private ITruckRepository truckRepository;
 
-    public TruckService(IVehicleRepository truckRepository) {
+    public TruckService(ITruckRepository truckRepository) {
         this.truckRepository = truckRepository;
     }
 
     @Override
-    public void add(Vehicle truck) {
-        truckRepository.add((Truck) truck);
+    public void addTruck(Truck truck) {
+        truckRepository.addTruck( truck);
         System.out.println("Truck added successfully!");
     }
 
     @Override
-    public void display() {
+    public void displayTruck() {
         System.out.println("List of Trucks:");
-        truckRepository.display();
+        truckRepository.displayTruck();
     }
 
     @Override

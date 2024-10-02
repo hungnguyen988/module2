@@ -2,25 +2,27 @@ package quan_ly_phuong_tien_2.service;
 
 import quan_ly_phuong_tien_2.model.Motorbike;
 import quan_ly_phuong_tien_2.model.Vehicle;
-import quan_ly_phuong_tien_2.repository.IVehicleRepository;
+import quan_ly_phuong_tien_2.repository.IMotorRepository;
 
-public class MotorbikeService implements IVehicleService {
-    private IVehicleRepository motorbikeRepository;
+public class MotorbikeService implements IMotorService{
+    private IMotorRepository motorbikeRepository;
 
-    public MotorbikeService(IVehicleRepository motorbikeRepository) {
+    public MotorbikeService(IMotorRepository motorbikeRepository) {
         this.motorbikeRepository = motorbikeRepository;
     }
 
     @Override
-    public void add(Vehicle motorbike) {
-        motorbikeRepository.add((Motorbike) motorbike);
+    public void addMotor(Motorbike motorbike) {
+        motorbikeRepository.addMotor( motorbike);
         System.out.println("Motorbike added successfully!");
     }
 
+
+
     @Override
-    public void display() {
+    public void displayMotor() {
         System.out.println("Motorbikes:");
-        motorbikeRepository.display();
+        motorbikeRepository.displayMotor();
     }
 
     @Override

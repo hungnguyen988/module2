@@ -6,7 +6,7 @@ import quan_ly_phuong_tien_2.model.Vehicle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckRepository implements IVehicleRepository {
+public class TruckRepository implements ITruckRepository {
     List<Truck> trucks = new ArrayList<>();
 
     public TruckRepository() {
@@ -15,12 +15,12 @@ public class TruckRepository implements IVehicleRepository {
     }
 
     @Override
-    public void add(Vehicle truck) {
-        trucks.add((Truck) truck);
+    public void addTruck(Truck truck) {
+        trucks.add(truck);
     }
 
     @Override
-    public void display() {
+    public void displayTruck() {
         if (trucks.isEmpty()) {
             System.out.println("No trucks found.");
         }else {

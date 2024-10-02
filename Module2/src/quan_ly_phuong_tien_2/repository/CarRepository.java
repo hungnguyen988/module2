@@ -6,7 +6,7 @@ import quan_ly_phuong_tien_2.model.Vehicle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarRepository implements IVehicleRepository {
+public class CarRepository implements ICarRepository {
     List<Car> carList = new ArrayList<>();
     public CarRepository() {
     }
@@ -14,12 +14,12 @@ public class CarRepository implements IVehicleRepository {
 
 
     @Override
-    public void add(Vehicle car) {
-        carList.add((Car) car);
+    public void addCar(Car car) {
+        carList.add( car);
     }
 
     @Override
-    public void display() {
+    public void displayCar() {
         if (carList.isEmpty()) {
             System.out.println("No car found!");
         }else {

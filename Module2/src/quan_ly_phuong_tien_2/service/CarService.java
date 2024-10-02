@@ -2,25 +2,25 @@ package quan_ly_phuong_tien_2.service;
 
 import quan_ly_phuong_tien_2.model.Car;
 import quan_ly_phuong_tien_2.model.Vehicle;
-import quan_ly_phuong_tien_2.repository.IVehicleRepository;
+import quan_ly_phuong_tien_2.repository.ICarRepository;
 
-public class CarService implements IVehicleService{
-    private IVehicleRepository carRepository;
+public class CarService implements ICarService{
+    private ICarRepository carRepository   ;
 
-    public CarService(IVehicleRepository carRepository) {
+    public CarService(ICarRepository carRepository) {
         this.carRepository = carRepository;
     }
 
     @Override
-    public void add(Vehicle car) {
-        carRepository.add((Car) car);
+    public void addCar(Car car) {
+        carRepository.addCar( car);
         System.out.println("Car added successfully");
     }
 
     @Override
-    public void display() {
+    public void displayCar() {
         System.out.println("List of cars:");
-        carRepository.display();
+        carRepository.displayCar();
 
     }
 

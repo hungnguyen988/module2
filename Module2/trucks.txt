@@ -1,0 +1,1 @@
+licensePlate='43a', manufacturer='honda', year=2020, owner='minh'
