@@ -1,26 +1,39 @@
-package phuong_tien_doc_ghi_file.repository;
+package doc_ghi_file_phuong_tien.repository;
 
-import phuong_tien_doc_ghi_file.model.Car;
+
+import doc_ghi_file_phuong_tien.model.Car;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepository {
-    private static final String FILE_PATH = "E:\\codegym\\module2\\Module2\\src\\phuong_tien_doc_ghi_file\\data\\cars.csv";
+
+    private static final String FILE_PATH = "E:\\codegym\\module2\\Module2\\src\\doc_ghi_file_phuong_tien\\data\\vehicle.csv";
     private List<Car> carList = new ArrayList<>();
 
     public List<Car> getAllCars() {
+        readFromFile();
         return carList;
     }
 
     public void addCar(Car car) {
         carList.add(car);
-        writeToFile();
+        addOneCar(car);
+
+    }
+
+    private static void addOneCar(Car car) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
+            writer.write(car.toString());
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void writeToFile() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
             for (Car car : carList) {
                 writer.write(car.toString());
                 writer.newLine();
@@ -29,6 +42,7 @@ public class CarRepository {
             e.printStackTrace();
         }
     }
+
 
     public void readFromFile() {
         carList.clear();
@@ -40,9 +54,7 @@ public class CarRepository {
                 }
                 // Tách chuỗi thành các thông tin xe để tái tạo đối tượng Car
                 String[] carData = line.split(",");
-                if (carData.length!= 7) {
-                    System.out.println("dữ liệu xe không đúng định dạng");
-                }else {
+                if (carData[0].equals("Car")) {
                     String licensePlate = carData[1];
                     String manufacturer = carData[2];
                     int year = Integer.parseInt(carData[3]);
@@ -55,5 +67,10 @@ public class CarRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void deleteCarByLicensePlate(String licensePlated) {
+        readFromFile();
+        carList.removeIf(car -> car.getLicensePlate().equals(licensePlated));
     }
 }

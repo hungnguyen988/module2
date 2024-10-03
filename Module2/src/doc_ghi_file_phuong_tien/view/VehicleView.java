@@ -1,17 +1,26 @@
-package phuong_tien_doc_ghi_file.view;
+package doc_ghi_file_phuong_tien.view;
 
 
-import phuong_tien_doc_ghi_file.controller.CarController;
-import phuong_tien_doc_ghi_file.controller.MotorbikeController;
-import phuong_tien_doc_ghi_file.controller.TruckController;
-import phuong_tien_doc_ghi_file.model.Car;
-import phuong_tien_doc_ghi_file.model.Motorbike;
-import phuong_tien_doc_ghi_file.model.Truck;
-import phuong_tien_doc_ghi_file.repository.ManufacturerRepository;
+import doc_ghi_file_phuong_tien.controller.CarController;
+import doc_ghi_file_phuong_tien.controller.MotorbikeController;
+import doc_ghi_file_phuong_tien.controller.TruckController;
+import doc_ghi_file_phuong_tien.model.Car;
+import doc_ghi_file_phuong_tien.model.Motorbike;
+import doc_ghi_file_phuong_tien.model.Truck;
+import doc_ghi_file_phuong_tien.repository.CarRepository;
+import doc_ghi_file_phuong_tien.repository.ManufacturerRepository;
+import doc_ghi_file_phuong_tien.repository.MotorbikeRepository;
+import doc_ghi_file_phuong_tien.repository.TruckRepository;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class VehicleView {
+    private CarRepository carRepository = new CarRepository();
+    private TruckRepository truckRepository = new TruckRepository();
+    private MotorbikeRepository motorbikeRepository = new MotorbikeRepository();
+    private  final String FILE_PATH = "E:\\codegym\\module2\\Module2\\src\\doc_ghi_file_phuong_tien\\data\\vehicle.csv";
     private final CarController carController = new CarController();
     private final TruckController truckController = new TruckController();
     private final MotorbikeController motorbikeController = new MotorbikeController();
@@ -176,10 +185,26 @@ public class VehicleView {
     private void deleteVehicleByLicensePlate() {
         System.out.print("\nEnter the license plate to delete: ");
         String licensePlate = scanner.nextLine();
-        truckController.deleteTruck(licensePlate);
-        carController.deleteCar(licensePlate);
-        motorbikeController.deleteMotorbike(licensePlate);
+        truckRepository.deleteTruckByLicensePlate(licensePlate);
+        carRepository.deleteCarByLicensePlate(licensePlate);
+        motorbikeRepository.deleteMotorbikeByLicensePlate(licensePlate);
+        clearFile();
+        truckRepository.writeToFile();
+        carRepository.writeToFile();
+        motorbikeRepository.writeToFile();
         System.out.println("If the vehicle existed, it was deleted successfully.");
+    }
+
+
+    public boolean clearFile( ) {
+        try (FileWriter fileWriter = new FileWriter(FILE_PATH)) {
+            fileWriter.write("");
+            return true;
+        } catch (IOException e) {
+            System.out.println("Lỗi khi xóa dữ liệu trong file: " + e.getMessage());
+            return false;
+        }
+
     }
 
     public static void main(String[] args) {

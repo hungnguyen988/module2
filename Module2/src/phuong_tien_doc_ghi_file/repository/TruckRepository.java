@@ -40,14 +40,14 @@ public class TruckRepository {
                 }
                 // Tách chuỗi thành các thông tin xe để tái tạo đối tượng Truck
                 String[] truckData = line.split(",");
-                if (truckData.length!= 5) {
+                if (truckData.length == 5) {
                     String licensePlate = truckData[0];
                     String manufacturer = truckData[1];
                     int year = Integer.parseInt(truckData[2]);
                     String owner = truckData[3];
                     double loadCapacity = Double.parseDouble(truckData[4]);
                     truckList.add(new Truck(licensePlate, manufacturer, year, owner, loadCapacity));
-                }else {
+                } else {
                     System.out.println("dữ liệu  xe không đúng định dạng");
                 }
             }
