@@ -18,7 +18,6 @@ public class MotorbikeRepository {
     }
 
     public void addMotorbike(Motorbike motorbike) {
-        motorbikeList.add(motorbike);
         addOneMotorbike(motorbike);
     }
 

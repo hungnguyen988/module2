@@ -18,7 +18,6 @@ public class CarRepository {
     }
 
     public void addCar(Car car) {
-        carList.add(car);
         addOneCar(car);
 
     }

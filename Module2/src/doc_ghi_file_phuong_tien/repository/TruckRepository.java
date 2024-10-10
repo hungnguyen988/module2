@@ -17,7 +17,6 @@ public class TruckRepository {
     }
 
     public void addTruck(Truck truck) {
-        truckList.add(truck);
         addOneTruck(truck);
     }
 

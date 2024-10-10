@@ -109,52 +109,63 @@ public class VehicleView {
 
     private String choiceManufacturer() {
         manufacturerRepository.getAllManufacturers();
-        System.out.print("choice:");
-        int manufacturerName = Integer.parseInt(scanner.nextLine());
-        String manufacturer;
-        switch (manufacturerName) {
-            case 1:
-                manufacturer = "Toyota";
-                break;
-            case 2:
-                manufacturer = "Honda";
-                break;
-            case 3:
-                manufacturer = "Ford";
-                break;
-            case 4:
-                manufacturer = "BMW";
-                break;
-            case 5:
-                manufacturer = "Mercedes";
-                break;
-            default:
-                System.out.println("Invalid manufacturer name.");
-                return null;
+        try{
+            System.out.print("choice:");
+            int manufacturerName = Integer.parseInt(scanner.nextLine());
+            String manufacturer;
+            switch (manufacturerName) {
+                case 1:
+                    manufacturer = "Toyota";
+                    break;
+                case 2:
+                    manufacturer = "Honda";
+                    break;
+                case 3:
+                    manufacturer = "Ford";
+                    break;
+                case 4:
+                    manufacturer = "BMW";
+                    break;
+                case 5:
+                    manufacturer = "Mercedes";
+                    break;
+                default:
+                    System.out.println("Invalid manufacturer name.");
+                    return null;
+            }
+            return manufacturer;
+        }catch (NumberFormatException e){
+            System.out.println("Invalid input. Please enter a number.");
+            return null;
         }
-        return manufacturer;
+
     }
 
     private void displayVehiclesByType() {
-        System.out.println("\nWhat type of vehicle do you want to display?");
-        System.out.println("1. Truck");
-        System.out.println("2. Car");
-        System.out.println("3. Motorbike");
-        int vehicleType = Integer.parseInt(scanner.nextLine());
+        try {
+            System.out.println("\nWhat type of vehicle do you want to display?");
+            System.out.println("1. Truck");
+            System.out.println("2. Car");
+            System.out.println("3. Motorbike");
+            int vehicleType = Integer.parseInt(scanner.nextLine());
 
-        switch (vehicleType) {
-            case 1:
-                truckController.displayTrucks();
-                break;
-            case 2:
-                carController.displayCars();
-                break;
-            case 3:
-                motorbikeController.displayMotorbikes();
-                break;
-            default:
-                System.out.println("Invalid vehicle type.");
+            switch (vehicleType) {
+                case 1:
+                    truckController.displayTrucks();
+                    break;
+                case 2:
+                    carController.displayCars();
+                    break;
+                case 3:
+                    motorbikeController.displayMotorbikes();
+                    break;
+                default:
+                    System.out.println("Invalid vehicle type.");
+            }
+        }catch (NumberFormatException e){
+            System.out.println("Invalid input. Please enter a number.");
         }
+
     }
 
     private void displayAllVehicles() {
